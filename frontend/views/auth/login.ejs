@@ -1,0 +1,8 @@
+<h1>Login</h1>
+<form method="POST" action="/auth/login">
+  <input class="form-control mb-2" name="email" placeholder="Email or Number" required />
+  <input class="form-control mb-2" name="password" type="password" placeholder="Password" required />
+  <button class="btn btn-primary">Login</button>
+</form>
+<p>Don't have an account? <a href="/auth/register">Register</a></p>
+<% if (error) { %><div class="text-danger"><%= error %></div><% } %>

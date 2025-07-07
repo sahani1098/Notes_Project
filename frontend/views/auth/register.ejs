@@ -1,0 +1,11 @@
+<h1>Register</h1>
+<form method="POST" action="/auth/register">
+  <input name="firstName" class="form-control mb-2" placeholder="First Name" required />
+  <input name="lastName" class="form-control mb-2" placeholder="Last Name" required />
+  <input name="number" class="form-control mb-2" placeholder="Phone Number" required />
+  <input name="email" class="form-control mb-2" placeholder="Email" required />
+  <input name="password" class="form-control mb-2" type="password" placeholder="Password" required />
+  <input name="confirmPassword" class="form-control mb-2" type="password" placeholder="Confirm Password" required />
+  <button class="btn btn-success">Register</button>
+</form>
+<% if (error) { %><div class="text-danger"><%= error %></div><% } %>
