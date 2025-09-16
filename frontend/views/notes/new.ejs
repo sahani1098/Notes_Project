@@ -1,0 +1,22 @@
+<h1>New Note</h1>
+
+<!-- 🔴 Show error if duplicate title is found -->
+<% if (typeof error !== 'undefined' && error) { %>
+  <div id="error-msg" class="alert alert-danger"><%= error %></div>
+
+  <script>
+    setTimeout(() => {
+      const errorBox = document.getElementById("error-msg");
+      if (errorBox) {
+        errorBox.style.display = "none";
+      }
+    }, 1000); // 3 seconds
+  </script>
+<% } %>
+
+<form method="POST" action="/notes">
+      <input name="title" class="form-control mb-2" placeholder="Title" required />
+      <textarea name="description" class="form-control mb-2" placeholder="Description" rows="8" required></textarea>
+      <button class="btn btn-outline-success">Create</button>
+      <a href="/notes" class="btn btn-outline-danger">Cancel</a>
+</form>
